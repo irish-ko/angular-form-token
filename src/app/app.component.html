@@ -1,2 +1,7 @@
 
-<app-validation-form></app-validation-form>
+<app-validation-form *ngIf="isCreateToken; else cardToken"
+                     (showToken)="showToken()"></app-validation-form>
+
+<ng-template #cardToken>
+    <app-show-draft></app-show-draft>
+</ng-template>

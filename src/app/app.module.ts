@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ValidationFormComponent } from './validation-form/validation-form.component';
 
 import {StoreService} from "./store.service";
+import { ShowDraftComponent } from './show-draft/show-draft.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ValidationFormComponent
+    ValidationFormComponent,
+    ShowDraftComponent
   ],
   imports: [
     BrowserModule,
