@@ -1,0 +1,43 @@
+
+<div class="content">
+    <h1>Token</h1>
+    <p>Create your own crypto token</p>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <label for="companySelect">Company</label>
+        <select name="companySelect" id="companySelect" ngModel>
+            <option *ngFor="let company of userCompany; let index = index"
+                    value="{{index}}">{{company}}
+            </option>
+        </select>
+
+        <label for="tokenName">Token name</label>
+        <input id="tokenName" name="tokenName" type="text" ngModel>
+
+        <label for="symbolName">Symbol</label>
+        <input id="symbolName" name="symbolName" type="text" style="text-transform:uppercase" ngModel>
+
+        <label for="numberToken">Maximum token supply</label>
+        <input id="numberToken" name="numberToken" type="number" ngModel>
+
+        <label for="blockchain">Blockchain</label>
+        <div id="blockchain" class="form_radio_btn">
+            <input id="radio-1" type="radio" name="radio" value="1" ngModel
+                   [checked]="first.value = '1'"
+                   #first="ngModel">
+            <label for="radio-1">Enthereum</label>
+
+            <input id="radio-2" type="radio" name="radio" value="2" ngModel #first="ngModel">
+            <label for="radio-2">Binance Smart Chain</label>
+        </div>
+
+        <label for="supply">Supply</label>
+        <div id="supply" class="form_checkbox">
+            <input id="enabled" type="checkbox" name="supply" ngModel checked>
+            <label for="enabled">Enabled</label>
+        </div>
+
+        <button>Submit</button>
+        <input type="button" value="SAVE DRAFT">
+
+    </form>
+</div>
