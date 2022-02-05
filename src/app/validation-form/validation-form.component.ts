@@ -143,6 +143,7 @@ export class ValidationFormComponent implements OnInit, AfterViewInit {
         const token:Draft = {
             ...this.formData,
             companySelect: this.userCompany[+this.formData.companySelect],
+            symbolName: this.formData.symbolName.toUpperCase(),
         };
 
         return token;
